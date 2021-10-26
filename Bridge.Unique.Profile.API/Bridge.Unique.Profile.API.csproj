@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AWS.Logger.SeriLog" Version="3.1.1" />
+        <PackageReference Include="AWSSDK.CloudWatchLogs" Version="3.7.1.60" />
+        <PackageReference Include="AWSSDK.Core" Version="3.7.3.25" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Serilog" Version="2.10.0" />
+        <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+        <PackageReference Include="Serilog.Filters.Expressions" Version="2.1.0" />
+        <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+        <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Bridge.Unique.Profile.Communication\Bridge.Unique.Profile.Communication.csproj" />
+        <ProjectReference Include="..\Bridge.Unique.Profile.Domain\Bridge.Unique.Profile.Domain.csproj" />
+        <ProjectReference Include="..\Bridge.Unique.Profile.IOC\Bridge.Unique.Profile.IOC.csproj" />
+        <ProjectReference Include="..\Bridge.Unique.Profile.System\Bridge.Unique.Profile.System.csproj" />
+    </ItemGroup>
+
+    <Target Name="CopyPackages" AfterTargets="Build">
+        <ItemGroup>
+            <PackageReferenceFiles Condition="%(PackageReference.CopyToOutputDirectory) != ''" Include="$(NugetPackageRoot)\%(PackageReference.Identity)\%(PackageReference.Version)\%(PackageReference.CopyToOutputDirectory)" />
+        </ItemGroup>
+        <Copy SourceFiles="@(PackageReferenceFiles)" DestinationFolder="$(OutDir)" />
+    </Target>
+
+</Project>

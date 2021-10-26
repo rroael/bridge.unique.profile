@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Bridge.Commons.Extension" Version="1.0.0"/>
+        <PackageReference Include="Bridge.Commons.Location" Version="1.0.0"/>
+        <PackageReference Include="Bridge.Commons.Redis" Version="1.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0"/>
+        <PackageReference Include="System.Text.Json" Version="5.0.2"/>
+        <PackageReference Include="ViaCep" Version="3.2.19"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Bridge.Unique.Profile.Communication\Bridge.Unique.Profile.Communication.csproj"/>
+        <ProjectReference Include="..\Bridge.Unique.Profile.System\Bridge.Unique.Profile.System.csproj"/>
+    </ItemGroup>
+
+</Project>

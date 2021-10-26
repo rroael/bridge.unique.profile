@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AWSSDK.Core" Version="3.7.3.25" />
+        <PackageReference Include="Bridge.Commons.Extension" Version="1.0.0" />
+        <PackageReference Include="Bridge.Commons.Notification.Aws" Version="1.0.0" />
+        <PackageReference Include="Bridge.Commons.System" Version="1.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.13.1" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.13.1" />
+    </ItemGroup>
+
+</Project>

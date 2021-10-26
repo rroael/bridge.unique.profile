@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AWSSDK.Core" Version="3.7.3.25"/>
+        <PackageReference Include="Bridge.Commons.Extension" Version="1.0.0"/>
+        <PackageReference Include="Bridge.Commons.System.AspNet" Version="1.0.0"/>
+        <PackageReference Include="SimpleInjector.Integration.AspNetCore" Version="5.3.0"/>
+        <PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc" Version="5.3.0"/>
+        <PackageReference Include="System.Text.Json" Version="5.0.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Bridge.Unique.Profile.Domain\Bridge.Unique.Profile.Domain.csproj"/>
+        <ProjectReference Include="..\Bridge.Unique.Profile.Postgres\Bridge.Unique.Profile.Postgres.csproj"/>
+        <ProjectReference Include="..\Bridge.Unique.Profile.Redis\Bridge.Unique.Profile.Redis.csproj"/>
+    </ItemGroup>
+
+</Project>

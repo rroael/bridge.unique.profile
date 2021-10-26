@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageId>Bridge.Unique.Profile.Communication</PackageId>
+        <Title>Bridge.Unique.Profile.Communication</Title>
+        <Version>1.0.0</Version>
+        <Authors>Robson Leao</Authors>
+        <Company>Bridge Core</Company>
+        <Description>
+            Communication package for the microservice Unique Profile (SSO - Single Sign-On).
+        </Description>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageReleaseNotes>First Version</PackageReleaseNotes>
+        <PackageTags>bridge unique profile model request result</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Bridge.Commons.Extension" Version="1.0.0"/>
+        <PackageReference Include="Bridge.Commons.Location" Version="1.0.0"/>
+        <PackageReference Include="Bridge.Commons.System" Version="1.0.0"/>
+        <PackageReference Include="Bridge.Commons.Validation" Version="1.0.0"/>
+        <PackageReference Include="FluentValidation" Version="10.3.4"/>
+        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0"/>
+        <PackageReference Include="System.Text.Json" Version="5.0.2"/>
+    </ItemGroup>
+
+</Project>

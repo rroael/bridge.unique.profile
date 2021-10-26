@@ -1,0 +1,44 @@
+{
+    "family": "<TASK_FAMILY>", 
+    "networkMode": "awsvpc", 
+    "containerDefinitions": [
+		{
+		  "name": "<CONTAINER_NAME>",
+		  "image": "<AWS_REGISTRY_IMAGE>",
+		  "cpu": 0,
+		  "memoryReservation": 998,
+		  "portMappings": [
+			{
+			  "hostPort": 443,
+			  "protocol": "tcp",
+			  "containerPort": 443
+			}
+		  ],
+		  "essential": true,
+		  "entryPoint": [],
+		  "command": [],
+		  "environment": [
+			{
+			  "name": "ASPNETCORE_ENVIRONMENT",
+			  "value": "production"
+			}
+		  ],
+		  "mountPoints": [],
+		  "volumesFrom": [],
+		  "logConfiguration": {
+			"logDriver": "awslogs",
+			"options": {
+			  "awslogs-group": "/ecs/<TASK_FAMILY>",
+			  "awslogs-region": "us-east-1",
+			  "awslogs-stream-prefix": "ecs"
+			}
+		  }
+		}
+	  ], 
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "executionRoleArn": "arn:aws:iam::140298642934:role/ecsTaskExecutionRole",
+    "cpu": "512",
+    "memory": "1024"
+}

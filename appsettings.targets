@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <!-- Configura os appsettings gerados para não serem copiados automaticamente nos diretórios de saída (build/publish) -->
+    <ItemGroup>
+        <AppSettingsFiles Include="*appsettings*json" />
+        <Content Update="@(AppSettingsFiles)">
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+            <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+        </Content>
+    </ItemGroup>
+
+    <!-- Quando for executado o comando Build e for especificado o Configuration, irá buscar o appsettings com o mesmo nome (ex: "appsettings.Development.json") e copiar manualmente para o diretório de saída, renomeando para "appsettings.json". 
+         Ex: dotnet build "{projectpath}.csproj" /p:configuration=Development
+    -->
+    <Target Name="CopyAppSettingsToOutputPath" AfterTargets="Build" Condition="Exists('appsettings.$(Configuration).json')">
+        <Copy SourceFiles="appsettings.$(Configuration).json" DestinationFiles="$(OutputPath)appsettings.json" />
+    </Target>
+
+    <!-- Quando for executado o comando Build e não for especificado o Configuration irá buscar todos os appsettings criados e copiar para o diretório de saída mantendo os nomes originais (Utilizar essa abordagem quando quiser usar variáveis de ambiente do .net core) 
+         Ex: dotnet build "{projectpath}.csproj"
+    -->
+    <Target Name="CopyAllAppSettingsToOutputPath" AfterTargets="Build" Condition="!Exists('appsettings.$(Configuration).json')">
+        <Copy SourceFiles="@(AppSettingsFiles)" DestinationFolder="$(OutputPath)"></Copy>
+    </Target>
+
+    <!-- Quando for executado o comando publish irá buscar e apagar no diretório de publicação todos os appsettings que tenham sido gerados numa publicação anterior -->
+    <Target Name="DeleteAppSettingsOnPublishDir" BeforeTargets="Publish">
+        <ItemGroup>
+            <AppSettingsOnPublishDir Include="$(PublishDir)*appsettings*json" />
+        </ItemGroup>
+        <Delete Files="@(AppSettingsOnPublishDir)"></Delete>
+    </Target>
+
+    <!-- Quando for executado o comando publish irá buscar todos os appsettings gerados durante o build e copiar para o diretório de publicação
+         Ex1: dotnet publish "{projectpath}.csproj" /p:output="{outputpath}"
+         Ex2: dotnet publish "{projectpath}.csproj" /p:configuration=Development /p:output="{outputpath}"
+    -->
+    <Target Name="CopyAppSettingsToPublishDir" AfterTargets="Publish">
+        <ItemGroup>
+            <AppSettingsPublish Include="$(OutputPath)*appsettings*json" />
+        </ItemGroup>
+        <Copy SourceFiles="@(AppSettingsPublish)" DestinationFolder="$(PublishDir)"></Copy>
+    </Target>
+</Project>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+                id="root"
+                xmlns="">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="WrongLoginParameters" xml:space="preserve">
+        <value>Ao menos um dos campos a seguir deve ser preenchido para efetuar o login: E-mail ou UserName</value>
+    </data>
+    <data name="UserOrPasswordIncorrect" xml:space="preserve">
+        <value>Usuário ou senha incorretos</value>
+    </data>
+    <data name="EmailNotValidated" xml:space="preserve">
+        <value>E-mail não validado</value>
+    </data>
+    <data name="PhoneNotValidated" xml:space="preserve">
+        <value>Telefone não validado</value>
+    </data>
+    <data name="UserAlreadyExists" xml:space="preserve">
+        <value>Usuário já cadastrado</value>
+    </data>
+    <data name="UserAlreadyExistsAndWasAssociatedWithNewApplication" xml:space="preserve">
+        <value>Usuário já cadastrado e foi associado à nova aplicação</value>
+    </data>
+    <data name="UserAlreadyExistsAndWasAssociatedWithNewApplicationButNeedsApproval" xml:space="preserve">
+        <value>Usuário já cadastrado e foi associado à nova aplicação, mas precisa de aprovação de cadastro</value>
+    </data>
+    <data name="UserAlreadyExistsInPortal" xml:space="preserve">
+        <value>Usuário já está vinculado em outro portal.</value>
+    </data>
+    <data name="AddressNotFound" xml:space="preserve">
+        <value>Endereço não encontrado</value>
+    </data>
+    <data name="AddressZipCodeNotFound" xml:space="preserve">
+        <value>Cep não encontrado</value>
+    </data>
+    <data name="UserNotFound" xml:space="preserve">
+        <value>Usuário não encontrado</value>
+    </data>
+    <data name="AccessTokenExpired" xml:space="preserve">
+        <value>Token de acesso expirado</value>
+    </data>
+    <data name="RefreshTokenExpired" xml:space="preserve">
+        <value>Token de atualização expirado</value>
+    </data>
+    <data name="ApiUnauthorized" xml:space="preserve">
+        <value>Acesso não autorizado</value>
+    </data>
+    <data name="ClientUnauthorized" xml:space="preserve">
+        <value>Acesso não autorizado</value>
+    </data>
+    <data name="EmailAlreadyValidated" xml:space="preserve">
+        <value>E-mail já validado</value>
+    </data>
+    <data name="PhoneAlreadyValidated" xml:space="preserve">
+        <value>Telefone já validado</value>
+    </data>
+    <data name="WrongEmailValidationToken" xml:space="preserve">
+        <value>Token de validação de e-mail inválido</value>
+    </data>
+    <data name="WrongPhoneValidationCode" xml:space="preserve">
+        <value>Código de validação de telefone inválido</value>
+    </data>
+    <data name="WrongEmailFormat" xml:space="preserve">
+        <value>Formato de e-mail incorreto</value>
+    </data>
+    <data name="WrongPhoneCodeLength" xml:space="preserve">
+        <value>Tamanho incorreto de código de validação de telefone</value>
+    </data>
+    <data name="WrongPhoneNumberLength" xml:space="preserve">
+        <value>Tamanho incorreto de número de telefone</value>
+    </data>
+    <data name="SocialAccountWithoutPhone" xml:space="preserve">
+        <value>Telefone da conta social não informado</value>
+    </data>
+    <data name="SocialAccountWithoutEmail" xml:space="preserve">
+        <value>Email da conta social não informado</value>
+    </data>
+    <data name="InvalidAccessTokenProvider" xml:space="preserve">
+        <value>Acesso inválido do token informado ao provider</value>
+    </data>
+    <data name="InvalidUserProvider" xml:space="preserve">
+        <value>Usuário inválido do provider</value>
+    </data>
+    <data name="WrongPassword" xml:space="preserve">
+        <value>Senha incorreta</value>
+    </data>
+    <data name="NameNotComplete" xml:space="preserve">
+        <value>O campo 'Name' deve conter um nome completo</value>
+    </data>
+    <data name="AccessNotApproved" xml:space="preserve">
+        <value>Seu acesso ainda não foi aprovado</value>
+    </data>
+    <data name="AccessAlreadyApproved" xml:space="preserve">
+        <value>Acesso já aprovado</value>
+    </data>
+    <data name="ClientAlreadyExists" xml:space="preserve">
+        <value>Cliente já cadastrado</value>
+    </data>
+    <data name="ClientCouldNotBeRegistered" xml:space="preserve">
+        <value>Cliente não pode ser cadastrado</value>
+    </data>
+</root>
