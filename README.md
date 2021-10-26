@@ -50,6 +50,7 @@ Cloud Technologies used:
 * AWS Auto Scaling
 
 Other Technologies used:
+* JWT - Json Web Token
 * Serilog
 * ReDoc
 
